@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dsr-gm-vPc">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0HU-DH-tTv">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Dsr-gm-vPc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n47-kB-RdV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="27i-bW-5g4" kind="relationship" relationship="rootViewController" id="E8a-Nc-9lE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFq-Sz-24r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-92"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="X6I-46-UV6">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="27i-bW-5g4" customClass="HomeVC" customModule="iOSTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbD-aY-FC8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gGP-e4-Tdp">
+                                <rect key="frame" x="30" y="99" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="SXg-az-Aoi"/>
+                                    <constraint firstAttribute="height" constant="30" id="lKs-4N-iaj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essential Course for Upgrade Your Skill" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QV-xv-Szp">
+                                <rect key="frame" x="30" y="149" width="333" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-FF-JxB">
+                                <rect key="frame" x="30" y="270.66666666666669" width="333" height="527.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="15" id="08V-fN-jgd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="27i-bW-5g4" id="5wI-A9-baW"/>
+                                    <outlet property="delegate" destination="27i-bW-5g4" id="Csj-dQ-F8h"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wzz-26-ahP"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qu1-FF-JxB" firstAttribute="top" secondItem="3QV-xv-Szp" secondAttribute="bottom" constant="50" id="11L-S9-lXc"/>
+                            <constraint firstItem="Wzz-26-ahP" firstAttribute="trailing" secondItem="qu1-FF-JxB" secondAttribute="trailing" constant="30" id="1F5-ul-pDH"/>
+                            <constraint firstItem="gGP-e4-Tdp" firstAttribute="leading" secondItem="Wzz-26-ahP" secondAttribute="leading" constant="30" id="AOU-xz-UkT"/>
+                            <constraint firstItem="qu1-FF-JxB" firstAttribute="leading" secondItem="Wzz-26-ahP" secondAttribute="leading" constant="30" id="PMD-9k-mnw"/>
+                            <constraint firstItem="3QV-xv-Szp" firstAttribute="leading" secondItem="gGP-e4-Tdp" secondAttribute="leading" id="QmD-RG-6Hf"/>
+                            <constraint firstItem="3QV-xv-Szp" firstAttribute="top" secondItem="gGP-e4-Tdp" secondAttribute="bottom" constant="20" id="gBT-Oq-NnT"/>
+                            <constraint firstItem="gGP-e4-Tdp" firstAttribute="top" secondItem="Wzz-26-ahP" secondAttribute="top" constant="40" id="o6w-jx-bEf"/>
+                            <constraint firstItem="Wzz-26-ahP" firstAttribute="trailing" secondItem="3QV-xv-Szp" secondAttribute="trailing" constant="30" id="wEZ-tD-QHJ"/>
+                            <constraint firstItem="Wzz-26-ahP" firstAttribute="bottom" secondItem="qu1-FF-JxB" secondAttribute="bottom" constant="20" id="z8V-ox-WJS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rp8-hY-d1V"/>
+                    <connections>
+                        <outlet property="categoryCollView" destination="qu1-FF-JxB" id="m92-VZ-eFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcu-f8-qmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="-92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="96" height="96"/>
+    </resources>
+</document>
